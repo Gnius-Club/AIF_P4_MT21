@@ -6,7 +6,7 @@
     <title>Playbook-P4-TM21</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -16,6 +16,15 @@
                 <span id="global-timer">⏱️ 40:00</span>
                 <button id="global-start-stop">Start</button>
                 <button id="global-reset">Reset</button>
+            </div>
+            <!-- Estructura del Theme Toggle agregada -->
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
             </div>
         </div>
     </header>
@@ -49,8 +58,12 @@
                 <div class="command-section xolo-prompt">
                     <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
                     <div class="prompt-box">
+                        <!-- Estructura de botón de copiado agregada -->
                         <div class="prompt-header">
                             <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
                         </div>
                         <pre id="main-prompt">Ayúdame a entender cómo la A.I. Lens detecta una pelota y cómo usa X, Y para decir dónde está. Después, quiero que me enseñes por qué la IA puede fallar cuando el objeto está en movimiento o cambia la luz. Vamos a diseñar pruebas: ¿qué pasa si la pelota está lejos? ¿si se mueve rápido? ¿si hay otra pelota parecida?</pre>
                     </div>
@@ -156,6 +169,8 @@
                     <h2>🚀 Actividad 1: Intro a la Misión</h2>
                     <div class="activity-timer">
                         <span class="activity-duration">⏱️ 2:00</span>
+                        <!-- Botón de timer agregado -->
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
                 </div>
                 <div class="roles-section">
@@ -200,6 +215,8 @@
                     <h2>🧠 Actividad 2: A.I. Gym</h2>
                     <div class="activity-timer">
                         <span class="activity-duration">⏱️ 8:00</span>
+                        <!-- Botón de timer agregado -->
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
                 </div>
                 <div class="roles-section">
@@ -245,7 +262,8 @@
                 </div>
                 
                 <div class="optional-script">
-                    <button class="collapsible-button" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">📖 Ver guion detallado (opcional)</button>
+                    <!-- Javascript inline eliminado -->
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
                     <div class="collapsible-content">
                         <p class="dialogue assistant">"¡Hola a todos! Ahora vamos a aprender algo increíble. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Hoy exploraremos cómo la Smart A.I. Lens puede 'ver' una pelota y decirnos su posición exacta usando números llamados X y Y. Pregúntenle a XOLO por qué a veces la cámara se confunde si nos movemos muy rápido o si cambia la luz. ¡Él es el experto, así que aprovechen para despejar todas sus dudas!"</p>
                     </div>
@@ -257,6 +275,8 @@
                     <h2>💡 Actividad 3: Brain Spark</h2>
                     <div class="activity-timer">
                         <span class="activity-duration">⏱️ 20:00</span>
+                        <!-- Botón de timer agregado -->
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
                 </div>
                 <div class="roles-section">
@@ -306,7 +326,8 @@
                     </div>
                 </div>
                 <div class="optional-script">
-                    <button class="collapsible-button" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'">📖 Ver guion detallado (opcional)</button>
+                    <!-- Javascript inline eliminado -->
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
                     <div class="collapsible-content">
                         <p class="dialogue assistant">"¡Es hora de crear! Vamos a convertir nuestro Cutebot en un guardián que persigue su pelota. El flujo es sencillo: platiquen con XOLO su idea, definan el VIBE, obtengan su GCS, pásenlo a bloques en MakeCode y experimenten. Por ejemplo, podrían programar que el Cutebot se ponga triste y gire en círculos si pierde de vista la pelota roja. Recuerden usar las preguntas de experimentación para ver qué tan resistente es su IA ante cambios de luz o velocidad. Cuando su simulador funcione, vengan por su hardware. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar su código en un segundo."</p>
                     </div>
@@ -325,6 +346,8 @@
                     <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
                     <div class="activity-timer">
                         <span class="activity-duration">⏱️ 5:00</span>
+                        <!-- Botón de timer agregado -->
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
                 </div>
                 <div class="roles-section">
@@ -379,6 +402,8 @@
                     <h2>✅ Actividad 5: Entrega de Evidencias</h2>
                     <div class="activity-timer">
                         <span class="activity-duration">⏱️ 5:00</span>
+                        <!-- Botón de timer agregado -->
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
                 </div>
                 <div class="roles-section">
@@ -424,4 +449,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html></html>
+</html>
